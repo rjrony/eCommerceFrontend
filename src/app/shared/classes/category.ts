@@ -1,0 +1,29 @@
+export class CategoryModel {
+    name: string;
+    description?: any;
+    bottomDescription?: any;
+    categoryLayoutId: string;
+    metaKeywords?: any;
+    metaDescription?: any;
+    metaTitle?: any;
+    seName: string;
+    parentCategoryId: string;
+    pictureId: string;
+    pageSize: number;
+    allowCustomersToSelectPageSize: boolean;
+    pageSizeOptions: string;
+    showOnHomePage: boolean;
+    featuredProductsOnHomePage: boolean;
+    includeInMenu: boolean;
+    published: boolean;
+    displayOrder: number;
+    externalId?: any;
+    flag?: any;
+    flagStyle?: any;
+    icon?: any;
+    hideOnCatalog: boolean;
+    showOnSearchBox: boolean;
+    searchBoxDisplayOrder: number;
+    id: string;
+    childCategories: CategoryModel[];
+}

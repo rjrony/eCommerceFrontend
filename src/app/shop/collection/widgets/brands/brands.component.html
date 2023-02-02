@@ -1,0 +1,34 @@
+<div class="collection-collapse-block" [class.open]="collapse" *ngIf="brands.length">
+    <h3 class="collapse-block-title" (click)="collapse = !collapse">brand</h3>
+    <div class="collection-collapse-block-content">
+      <div class="collection-brand-filter">
+        <div class="custom-control custom-checkbox collection-filter-checkbox"
+            *ngFor="let brand of brands; let i = index">
+          <input
+            type="checkbox"
+            [value]="brand.name"
+            [id]="brand.name"
+            [checked]="(brandsOnQuery.indexOf(brand.name.replaceAll(' ', '-')) > -1)"
+            (change)="appliedFilter(brand.name.replaceAll(' ', '-'))"
+            class="custom-control-input" />
+          <label class="custom-control-label" for="{{ brand.name }}">{{ brand.name }}</label>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--<div class="collection-collapse-block border-0" [class.open]="collapse">-->
+<!--    <h3 class="collapse-block-title" (click)="collapse = !collapse">Brands</h3>-->
+<!--    <div class="collection-collapse-block-content">-->
+<!--        <div class="collection-brand-filter">-->
+<!--            <ul class="category-list">-->
+<!--                <li *ngFor="let brand of brands">-->
+<!--                    <a href="javascript:void(0)" (click)="appliedFilter(brand.name.replaceAll(' ', '-'))">-->
+<!--                        {{ brand.name }}-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+

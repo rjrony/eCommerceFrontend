@@ -1,0 +1,21 @@
+<app-breadcrumb [title]="'Warehouse'" [breadcrumb]="'Warehouse'"></app-breadcrumb>
+<!-- section start -->
+<section class="filter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 warehouse"  *ngFor="let warehouse of warehouses">
+                <img [src]="warehouse.pictureId == null ? warehouseAvatar : pictureService.getPictureUrl(warehouse.pictureId)">
+                <br/><br/>
+                <h3>{{warehouse.name}}</h3>
+                
+                <p>{{warehouse.adminComment}}</p>
+                <p>PhoneNumber: {{warehouse.address?.phoneNumber}}</p>
+                <p>Address: {{warehouse.address?.address1}}</p>
+                <p>{{warehouse.address?.address2}}</p>
+                <p>{{warehouse.address?.zipPostalCode}}</p>
+                <p>{{warehouse.address?.city}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+

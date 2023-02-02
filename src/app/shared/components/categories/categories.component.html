@@ -1,0 +1,35 @@
+<!-- Start Categories List -->
+<div class="collection-collapse-block" [class.open]="collapse" *ngIf="categories.length">
+    <h3 class="collapse-block-title" (click)="collapse = !collapse">Category</h3>
+    <div class="collection-collapse-block-content">
+        <div class="collection-brand-filter">
+            <div class="custom-control custom-checkbox collection-filter-checkbox"
+                 *ngFor="let cateogry of categories; let i = index">
+                <input
+                        type="checkbox"
+                        [value]="cateogry.name"
+                        [id]="cateogry.name"
+                        [checked]="(categoriesOnQuery.indexOf(cateogry.name.replaceAll(' ', '-')) > -1)"
+                        (change)="appliedFilter(cateogry.name.replaceAll(' ', '-'))"
+                        class="custom-control-input" />
+                <label class="custom-control-label" for="{{ cateogry.name }}">{{ cateogry.name }}</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="collection-collapse-block border-0" [class.open]="collapse">-->
+<!--    <h3 class="collapse-block-title" (click)="collapse = !collapse">Category</h3>-->
+<!--    <div class="collection-collapse-block-content">-->
+<!--        <div class="collection-brand-filter">-->
+<!--            <ul class="category-list">-->
+<!--                <li *ngFor="let category of categories">-->
+<!--                    <a href="javascript:void(0)" (click)="appliedFilter(category.name.replaceAll(' ', '-'))">-->
+<!--                        {{ category.name }}-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+

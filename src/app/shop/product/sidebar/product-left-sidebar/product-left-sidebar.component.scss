@@ -1,0 +1,60 @@
+.tags {
+    list-style: none;
+    margin: 0;
+    padding: 1em;
+}
+    .tags li {
+        display: inline-block;
+        margin-right: 2em;
+        position: relative;
+    }
+    .tags a {
+        background: #283c50;
+        color: #fff;
+        display: block;
+        line-height: 1em;
+        padding: 0.5em;
+        text-decoration: none;
+    
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        border-radius: 10px 0 0 10px;
+    
+        -webkit-transition: background 200ms ease;
+        -moz-transition: background 200ms ease;
+        -o-transition: background 200ms ease;
+        -ms-transition: background 200ms ease;
+        transition: background 200ms ease;
+    }
+    .tags a:before {
+        background: #283c50;
+        content: "";
+        height: 1.75em;
+        width: 1.75em;
+        position: absolute;
+        top: 0.1em;
+        right: -0.87em;
+        z-index: -1;
+    
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+        transform: rotate(40deg);
+    
+        -webkit-border-radius: 0.625em;
+        -moz-border-radius: 0.625em;
+        -o-border-radius: 0.625em;
+        -ms-border-radius: 0.625em;
+        border-radius: 0.625em;
+    
+        -webkit-transition: background 200ms ease;
+        -moz-transition: background 200ms ease;
+        -o-transition: background 200ms ease;
+        -ms-transition: background 200ms ease;
+        transition: background 200ms ease;
+    }
+    .tags a:hover,
+    .tags a:hover:before {
+        background: #1eaa82;
+    }

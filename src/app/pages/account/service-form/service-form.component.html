@@ -1,0 +1,73 @@
+<app-breadcrumb [title]="'Contact'" [breadcrumb]="'Contact'"></app-breadcrumb>
+<!--section start-->
+<section class=" contact-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="theme-form" #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="name">Voornaam</label>
+                            <input type="text" class="form-control" name="voornaam" id="name"required="" ngModel>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email">Achternaam</label>
+                            <input type="text" class="form-control" name="achternaam" id="last-name" required="" ngModel>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="review">Telefoon</label>
+                            <input type="text" class="form-control" id="review" name="telefoon"  required="" ngModel>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email"> E-mail </label>
+                            <input type="text" class="form-control" id="email" name="email"  required="" ngModel>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="ordernummer"> Ordernummer  </label>
+                            <input type="text" class="form-control" id="ordernummer" name="ordernummer" required="" ngModel>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="onderwerp"> Onderwerp </label>
+                            <select class="form-control" name="problemType" name="onderwerp" id="onderwerp" required="" ngModel>
+                                <optgroup label="Filiaal">
+                                    <option value="filiaal -> amsterdam arena">
+                                        Amsterdam Arena
+                                    </option>
+                                    <option value="filiaal -> amsterdam osdorp">
+                                        Amsterdam Osdorp
+                                    </option>
+                                    <option value="filiaal -> amsterdam westpoort">
+                                        Amsterdam Westpoort
+                                    </option>
+                                    <option value="filiaal -> capelle aan den ijssel">
+                                        Capelle aan den IJssel
+                                    </option>
+                                    <option value="filiaal -> den haag loosduinsekade">
+                                        Den Haag Loosduinsekade
+                                    </option>
+                                    <option value="filiaal -> den haag outlet">
+                                        Den Haag Outlet
+                                    </option>
+                                    <option value="filiaal -> utrecht">
+                                        Utrecht
+                                    </option>
+                                    <option value="filiaal -> tilburg">
+                                        Tilburg
+                                    </option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 30px">
+                            <label for="opmerking">Opmerking</label>
+                            <textarea class="form-control" name="opmerking" placeholder="Write Your Message" id="opmerking" rows="6" ngModel></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-solid" type="submit" >Send Your Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Section ends-->

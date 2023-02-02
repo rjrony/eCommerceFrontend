@@ -1,0 +1,28 @@
+img{
+    border: 1px solid gray;
+    overflow: hidden;
+    /* height: 132px; */
+    width: -webkit-fill-available;
+    filter: grayscale(50%);
+  }
+
+warehouse{ 
+    padding: 30px;
+}
+//   p{
+//     margin-bottom: 30px;
+//     text-align: center;
+//     font-size: 20px;
+//     font-weight: bold;
+//     margin-top: 5px;
+//   }
+  .warehouse:hover{
+    h3{
+      color: #2F96B4;
+    }
+    cursor: pointer;
+    img{
+      filter: grayscale(0%);
+      transform: scale(106%);
+    }
+  }

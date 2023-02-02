@@ -1,0 +1,19 @@
+<div class="collection-collapse-block" [class.open]="collapse" *ngIf="size.length">
+    <h3 class="collapse-block-title" (click)="collapse = !collapse">Size</h3>
+    <div class="collection-collapse-block-content">
+      <div class="color-selector">
+        <div class="collection-brand-filter">
+          <div class="custom-control custom-checkbox collection-filter-checkbox"
+            *ngFor="let sz of size">
+            <input type="checkbox" 
+              [value]="sz.id"
+                   [checked]="(sizeOnQuery.indexOf(sz.name.replaceAll(' ', '-')) > -1)"
+              [id]="sz.id"
+              (change)="appliedFilter(sz.name.replaceAll(' ', '-'))"
+              class="custom-control-input" />
+            <label class="custom-control-label" for="{{ sz.id }}">{{ sz.name }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

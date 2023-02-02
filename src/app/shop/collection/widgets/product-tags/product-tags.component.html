@@ -1,0 +1,19 @@
+<div class="collection-collapse-block" [class.open]="collapse" *ngIf="tags.length">
+    <h3 class="collapse-block-title" (click)="collapse = !collapse">Tag</h3>
+    <div class="collection-collapse-block-content">
+      <div class="collection-brand-filter">
+        <div class="custom-control custom-checkbox collection-filter-checkbox"
+            *ngFor="let tag of tags; let i = index">
+          <input
+            type="checkbox"
+            [value]="tag.Name"
+            [id]="tag.Name"
+            [checked]="(tagsOnQuery.indexOf(tag.Name) > -1)"
+            (change)="appliedFilter(tag.Name)"
+            class="custom-control-input" />
+          <label class="custom-control-label" for="{{ tag.Name }}">{{ tag.Name }}({{tag.Count}})</label>
+        </div>
+      </div>
+    </div>
+</div>
+

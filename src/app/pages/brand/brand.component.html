@@ -1,0 +1,13 @@
+<app-breadcrumb [title]="'Brand'" [breadcrumb]="'Brand'"></app-breadcrumb>
+<!-- section start -->
+<section class="filter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-6 brand"  *ngFor="let brand of brands">
+                <img [src]="brand.pictureId == null ? brandAvatar : pictureService.getPictureUrl(brand.pictureId)">
+                <p>{{brand.name}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
